@@ -1,0 +1,48 @@
+List of protein-ligand interactions
+-----------------------------------
+
+
+
+
+PDB code: flexibledocking
+==============
+
+
+Hydrogen bonds
+--------------
+
+       <----- A T O M   1 ----->       <----- A T O M   2 ----->
+
+       Atom Atom Res  Res              Atom Atom Res  Res
+        no  name name  no  Chain        no  name name  no  Chain  Distance
+    1    48  NH1 ARG  362    B    ---    17  O19 ZIN    1    A     3.117
+    2     1  N1  ZIN    1    A    ---    37  OE1 GLU  282    B     3.312
+
+
+Non-bonded contacts
+-------------------
+
+       <----- A T O M   1 ----->       <----- A T O M   2 ----->
+
+       Atom Atom Res  Res              Atom Atom Res  Res
+        no  name name  no  Chain        no  name name  no  Chain  Distance
+    1    45  CD  ARG  362    B    ---    17  O19 ZIN    1    A     3.673
+    2    25  CD  ARG  386    B    ---    13  O15 ZIN    1    A     3.816
+    3    24  CG  ARG  386    B    ---    13  O15 ZIN    1    A     2.785
+    4    23  CB  ARG  386    B    ---    13  O15 ZIN    1    A     3.127
+    5    20  CA  ARG  386    B    ---    13  O15 ZIN    1    A     3.569
+    6    52  C   SER  385    B    ---    13  O15 ZIN    1    A     3.833
+    7    28  NH1 ARG  386    B    ---    12  C14 ZIN    1    A     3.026
+    8    24  CG  ARG  386    B    ---    12  C14 ZIN    1    A     3.529
+    9    55  OG  SER  385    B    ---    12  C14 ZIN    1    A     3.010
+   10    28  NH1 ARG  386    B    ---    11  C12 ZIN    1    A     3.657
+   11    28  NH1 ARG  386    B    ---    10  C11 ZIN    1    A     3.113
+   12    38  OE2 GLU  282    B    ---    10  C11 ZIN    1    A     3.578
+   13    36  CD  GLU  282    B    ---     3  C3  ZIN    1    A     3.830
+   14    29  NH2 ARG  386    B    ---     2  C2  ZIN    1    A     3.835
+   15    28  NH1 ARG  386    B    ---     2  C2  ZIN    1    A     3.720
+   16    38  OE2 GLU  282    B    ---     2  C2  ZIN    1    A     3.708
+   17    37  OE1 GLU  282    B    ---     2  C2  ZIN    1    A     3.361
+   18    36  CD  GLU  282    B    ---     2  C2  ZIN    1    A     3.575
+   19    27  CZ  ARG  386    B    ---     1  N1  ZIN    1    A     3.471
+   20    36  CD  GLU  282    B    ---     1  N1  ZIN    1    A     3.767

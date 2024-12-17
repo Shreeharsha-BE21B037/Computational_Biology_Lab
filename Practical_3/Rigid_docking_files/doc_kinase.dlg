@@ -1,0 +1,2023 @@
+          AutoDock 4.2 Release 4.2.6   
+         (C) 1989-2012 The Scripps Research Institute
+        AutoDock comes with ABSOLUTELY NO WARRANTY.
+        AutoDock is free software, and you are welcome
+        to redistribute it under certain conditions;
+        for details type 'autodock4 -C'
+
+                     main.cc  $Revision: 1.213 $
+
+                   Compiled on Jul 18 2014 at 15:34:58
+
+
+This file was created at:			11:30 22" a.m., 08/22/2024
+                   on host:		"LAPTOP-LE18RADI"
+Current Working Directory = "C:\Users\shree\Desktop\ACADS\Comp_Bio_Lab\Practical_3"
+
+      ________________________________________________________________
+
+                   SETTING UP DEFAULT PARAMETER LIBRARY
+      ________________________________________________________________
+
+
+Random number generator was seeded with values 29692, 1724306422.
+Docking parameter file (DPF) used for this docking:		C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DPF> autodock_parameter_version 4.2       # used by autodock to validate parameter set
+
+	Autodock parameter version 4.2.
+DPF> outlev 1                             # diagnostic output level
+
+Output Level = 1  ADT-COMPATIBLE OUTPUT DURING DOCKING.
+DPF> intelec                              # calculate internal electrostatics
+
+Electrostatic energies will be calculated for all non-bonds between moving atoms.
+DPF> seed pid time                        # seeds for random generator
+
+Random number generator was seeded with values 29692, 1724306422.
+DPF> ligand_types A C F NA OA N           # atoms types in ligand
+
+DPF> fld 1iep_.maps.fld                   # grid_data_file
+
+Opening Grid Map Dimensions file:		1iep_.maps.fld
+Grid Point Spacing =				0.375 Angstroms
+
+Even Number of User-specified Grid Points =	60 x-points
+						46 y-points
+						44 z-points
+
+Coordinates of Central Grid Point of Maps =	(7.025, 93.837, 61.323)
+Macromolecule file used to create Grid Maps =	1iep_.pdbqt
+Grid Parameter file used to create Grid Maps =	C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/grid.gpf
+Minimum coordinates in grid = (-4.225, 85.212, 53.073)
+Maximum coordinates in grid = (18.275, 102.462, 69.573)
+
+DPF> map 1iep_.A.map                      # atom-specific affinity map
+
+DPF> map 1iep_.C.map                      # atom-specific affinity map
+
+DPF> map 1iep_.F.map                      # atom-specific affinity map
+
+DPF> map 1iep_.NA.map                     # atom-specific affinity map
+
+DPF> map 1iep_.OA.map                     # atom-specific affinity map
+
+DPF> map 1iep_.N.map                      # atom-specific affinity map
+
+DPF> elecmap 1iep_.e.map                  # electrostatics map
+
+DPF> desolvmap 1iep_.d.map                # desolvation map
+
+DPF> move ligand_1.pdbqt                  # small molecule
+
+1,4-interactions will be _ignored_ in the non-bonded internal energy calculation.
+
+Ligand PDBQT file = "ligand_1.pdbqt"
+
+INPUT LIGAND PDBQT FILE:
+________________________
+
+INPUT-LIGAND-PDBQT: REMARK  2 active torsions:
+INPUT-LIGAND-PDBQT: REMARK  status: ('A' for Active; 'I' for Inactive)
+INPUT-LIGAND-PDBQT: REMARK    1  A    between atoms: C9_9  and  N10_10 
+INPUT-LIGAND-PDBQT: REMARK    2  A    between atoms: C12_14  and  C14_16 
+INPUT-LIGAND-PDBQT: ROOT
+INPUT-LIGAND-PDBQT: ATOM      1  N1  ZIN A   1       3.352   4.517  -0.007  0.00  0.00    -0.390 NA
+INPUT-LIGAND-PDBQT: ATOM      2  C2  ZIN A   1       2.381   3.929  -0.001  0.00  0.00     0.250 C 
+INPUT-LIGAND-PDBQT: ATOM      3  C3  ZIN A   1       1.155   3.188   0.008  0.00  0.00     0.010 A 
+INPUT-LIGAND-PDBQT: ATOM      4  C4  ZIN A   1      -0.070   3.857   0.022  0.00  0.00     0.050 A 
+INPUT-LIGAND-PDBQT: ATOM      5  C5  ZIN A   1      -1.248   3.135   0.030  0.00  0.00     0.100 A 
+INPUT-LIGAND-PDBQT: ATOM      6  F6  ZIN A   1      -2.433   3.783   0.044  0.00  0.00    -0.130 F 
+INPUT-LIGAND-PDBQT: ATOM      7  C7  ZIN A   1      -1.218   1.749   0.017  0.00  0.00     0.030 A 
+INPUT-LIGAND-PDBQT: ATOM      8  C8  ZIN A   1      -0.013   1.076   0.008  0.00  0.00     0.070 A 
+INPUT-LIGAND-PDBQT: ATOM      9  C9  ZIN A   1       1.180   1.785   0.000  0.00  0.00     0.190 A 
+INPUT-LIGAND-PDBQT: ENDROOT
+INPUT-LIGAND-PDBQT: BRANCH   9  10
+INPUT-LIGAND-PDBQT: ATOM     10  N10 ZIN A   1       2.398   1.105  -0.014  0.00  0.00    -0.600 N 
+INPUT-LIGAND-PDBQT: ATOM     11  C18 ZIN A   1       3.051   0.742  -1.131  0.00  0.00     0.530 C 
+INPUT-LIGAND-PDBQT: ATOM     12  C17 ZIN A   1       4.330   0.017  -0.775  0.00  0.00     0.090 C 
+INPUT-LIGAND-PDBQT: ATOM     13  O19 ZIN A   1       2.670   0.963  -2.261  0.00  0.00    -0.530 OA
+INPUT-LIGAND-PDBQT: ATOM     14  C12 ZIN A   1       4.146  -0.367   0.712  0.00  0.00    -0.070 C 
+INPUT-LIGAND-PDBQT: ATOM     15  C11 ZIN A   1       3.136   0.702   1.189  0.00  0.00     0.280 C 
+INPUT-LIGAND-PDBQT: BRANCH  14  16
+INPUT-LIGAND-PDBQT: ATOM     16  C14 ZIN A   1       5.446  -0.250   1.464  0.00  0.00     0.500 C 
+INPUT-LIGAND-PDBQT: ATOM     17  O15 ZIN A   1       6.462   0.085   0.878  0.00  0.00    -0.680 OA
+INPUT-LIGAND-PDBQT: ATOM     18  O16 ZIN A   1       5.483  -0.490   2.659  0.00  0.00    -0.690 OA
+INPUT-LIGAND-PDBQT: ENDBRANCH  14  16
+INPUT-LIGAND-PDBQT: ENDBRANCH   9  10
+INPUT-LIGAND-PDBQT: TORSDOF 2
+________________________________________________________________________________
+
+Total charge on ligand                               =	-0.990 e
+REMARK  2 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C9_9  and  N10_10 
+REMARK    2  A    between atoms: C12_14  and  C14_16 
+
+
+Number of Rotatable Bonds in Small Molecule =	2 torsions
+Number of atoms in ligand:  18
+
+Number of non-hydrogen atoms in ligand:  18
+
+Number of vibrational degrees of freedom of ligand:  48
+
+
+Number of torsional degrees of freedom = 2
+Estimated loss of torsional free energy upon binding = +0.5966 kcal/mol
+
+
+DPF> about 2.234 1.640 0.158            # small molecule center
+
+Small molecule center of rotation =	(+2.234, +1.640, +0.158)
+
+DPF> tran0 random                         # initial coordinates/A or random
+
+Initial translation =			(0.346, 95.337, 65.625) Angstroms
+DPF> quaternion0 random                   # initial orientation
+
+Each run will begin with a new, random initial orientation.
+Initial quaternion,  (x,y,z,w) =	( 0.872, -0.069, -0.484, -0.031 ),
+DPF> dihe0 random                         # initial dihedrals (relative) or random
+
+DPF> torsdof 2                            # torsional degrees of freedom
+
+Number of torsional degrees of freedom = 2
+Free energy coefficient for torsional degrees of freedom = 0.2983, the factory default value.
+
+Estimated loss of torsional free energy upon binding = +0.5966 kcal/mol
+
+DPF> rmstol 2.0                           # cluster_tolerance/A
+
+Maximum RMS tolerance for conformational cluster analysis = 2.00 Angstroms
+DPF> extnrg 1000.0                        # external grid energy
+
+External grid energy (beyond grid map walls) = 1000.00
+
+DPF> e0max 0.0 10000                      # max initial energy; max number of retries
+
+Using user-specified maximum number of retries for simanneal initialization, 10000 retries.
+If the simanneal initial energy is greater than e0max, 0.000,
+then a new, random initial state will be created.
+
+DPF> ga_pop_size 150                      # number of individuals in population
+
+A population of 150 individuals will be used
+DPF> ga_num_evals 2500000                 # maximum number of energy evaluations
+
+There will be at most 2500000 function evaluations used.
+DPF> ga_num_generations 27000             # maximum number of generations
+
+The GA will run for at most 27000 generations.
+DPF> ga_elitism 1                         # number of top individuals to survive to next generation
+
+The 1 best will be preserved each GA generation.
+DPF> ga_mutation_rate 0.02                # rate of gene mutation
+
+The mutation rate is 0.020000.
+DPF> ga_crossover_rate 0.8                # rate of crossover
+
+The crossover rate is 0.800000.
+DPF> ga_window_size 10                    # 
+
+The GA's selection window is 10 generations.
+DPF> ga_cauchy_alpha 0.0                  # Alpha parameter of Cauchy distribution
+
+The alpha parameter (for the Cauchy distribution) is being set to 0.000000.
+DPF> ga_cauchy_beta 1.0                   # Beta parameter Cauchy distribution
+
+The beta parameter (for the Cauchy distribution) is being set to 1.000000.
+DPF> set_ga                               # set the above parameters for GA or LGA
+
+DPF> sw_max_its 300                       # iterations of Solis & Wets local search
+
+Solis & Wets algorithms will perform at most 300 iterations.
+DPF> sw_max_succ 4                        # consecutive successes before changing rho
+
+Solis & Wets algorithms expand rho every 4 in a row successes.
+DPF> sw_max_fail 4                        # consecutive failures before changing rho
+
+Solis & Wets algorithms contract rho every 4 in a row failures.
+DPF> sw_rho 1.0                           # size of local search space to sample
+
+rho is set to 1.000000.
+DPF> sw_lb_rho 0.01                       # lower bound on rho
+
+rho will never get smaller than 0.010000.
+DPF> ls_search_freq 0.06                  # probability of performing local search on individual
+
+Local search will be performed with frequency 0.060000.
+DPF> set_psw1                             # set the above pseudo-Solis & Wets parameters
+
+Creating a new Local Search object using the pseudo-Solis-Wets algorithm (pSW1) with the current settings.
+
+DPF> unbound_model bound                  # state of unbound ligand
+
+DPF> ga_run 20                            # do this many hybrid GA-LS runs
+
+centering ligand on specified point: 2.234 1.640 0.158
+Furthest true ligand atom from "about" center is 5.137 Angstroms (maxrad).
+Number of requested GA dockings = 20 runs
+Unbound model to be used is 'same as bound' [AutoDock 4.2 default].
+
+	BEGINNING GENETIC ALGORITHM DOCKING 1 of 20
+Run: 1 Seed: 536727751 1779925696 [ Run 1 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.833
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.240 89.228 68.117 quatxyzw -0.188667 -0.249997 -0.800372 -0.511185 center 2.234 1.640 0.158 ntor 2 66.0074 -164.7084
+State:	  8.240  89.228  68.117  -0.220 -0.291 -0.931 -118.514     66.01 -164.71
+
+DOCKED: MODEL        1
+DOCKED: USER    Run = 1
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.05 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    5.86 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.64 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.35 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.29 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.19 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.19 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.239735 89.227871 68.117218
+DOCKED: USER    NEWDPF quaternion0 -0.188667 -0.249997 -0.800372 -0.511185
+DOCKED: USER    NEWDPF axisangle0 -0.219515 -0.290873 -0.931239 -118.514419
+DOCKED: USER    NEWDPF quat0 -0.219515 -0.290873 -0.931239 -118.514419
+DOCKED: USER    NEWDPF dihe0 66.01 -164.71 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.404  87.307  69.204 -0.67 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.262  88.221  68.546 -0.21 +0.03    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.084  89.375  67.716 -0.26 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.193  90.034  67.183 -0.28 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      11.012  91.146  66.383 -0.18 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      12.086  91.784  65.868 -0.06 +0.02    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.735  91.605  66.102 -0.15 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.631  90.964  66.627 -0.10 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.793  89.846  67.433 -0.05 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.677  89.196  67.960 +0.11 -0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.935  89.666  68.977 +0.04 +0.17    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.813  88.702  69.292 -0.03 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.137  90.711  69.558 -0.03 -0.26    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.233  87.389  68.592 -0.05 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.156  87.914  67.468 -0.02 +0.09    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       5.036  86.679  68.015 +0.10 +0.43    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.396  87.195  67.114 -0.30 -0.77    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.708  85.587  68.448 -0.22 -0.74    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 2 of 20
+Run: 2 Seed: 436267191 1260527731 [ Run 2 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.824
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.250 89.226 68.154 quatxyzw -0.187506 -0.254791 -0.801256 -0.507851 center 2.234 1.640 0.158 ntor 2 63.5892 -164.6520
+State:	  8.250  89.226  68.154  -0.218 -0.296 -0.930 -118.958     63.59 -164.65
+
+DOCKED: MODEL        2
+DOCKED: USER    Run = 2
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    5.95 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.63 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.37 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.26 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.19 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.19 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.249562 89.225664 68.153791
+DOCKED: USER    NEWDPF quaternion0 -0.187506 -0.254791 -0.801256 -0.507851
+DOCKED: USER    NEWDPF axisangle0 -0.217665 -0.295772 -0.930130 -118.958433
+DOCKED: USER    NEWDPF quat0 -0.217665 -0.295772 -0.930130 -118.958433
+DOCKED: USER    NEWDPF dihe0 63.59 -164.65 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.396  87.304  69.274 -0.65 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.264  88.214  68.607 -0.21 +0.03    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.098  89.362  67.768 -0.26 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.214  90.014  67.239 -0.28 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      11.045  91.120  66.430 -0.18 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      12.125  91.750  65.919 -0.07 +0.02    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.771  91.582  66.134 -0.15 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.660  90.950  66.654 -0.10 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.811  89.837  67.470 -0.05 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.688  89.194  67.991 +0.11 -0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.939  89.675  68.998 +0.04 +0.17    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.810  88.718  69.311 -0.03 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.139  90.724  69.573 -0.03 -0.27    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.232  87.398  68.625 -0.04 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.167  87.911  67.506 -0.02 +0.09    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       5.038  86.687  68.043 +0.08 +0.42    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.382  87.218  67.162 -0.31 -0.73    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.728  85.581  68.452 -0.21 -0.74    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 3 of 20
+Run: 3 Seed: 1633630299 563761750 [ Run 3 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.675
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.414 89.202 68.075 quatxyzw -0.189043 -0.313620 -0.800605 -0.474275 center 2.234 1.640 0.158 ntor 2 -125.5816 -160.0917
+State:	  8.414  89.202  68.075  -0.215 -0.356 -0.909 -123.376   -125.58 -160.09
+
+DOCKED: MODEL        3
+DOCKED: USER    Run = 3
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -2.90 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    7.43 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.50 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.26 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.24 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.17 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.17 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.413891 89.202175 68.075034
+DOCKED: USER    NEWDPF quaternion0 -0.189043 -0.313620 -0.800605 -0.474275
+DOCKED: USER    NEWDPF axisangle0 -0.214730 -0.356234 -0.909389 -123.375704
+DOCKED: USER    NEWDPF quat0 -0.214730 -0.356234 -0.909389 -123.375704
+DOCKED: USER    NEWDPF dihe0 -125.58 -160.09 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.404  87.357  69.554 -0.58 -0.10    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.352  88.191  68.786 -0.21 +0.04    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.289  89.244  67.817 -0.28 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.462  89.802  67.308 -0.27 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      11.392  90.818  66.374 -0.21 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      12.529  91.358  65.882 -0.08 +0.02    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1      10.161  91.280  65.935 -0.15 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.993  90.739  66.435 -0.10 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       9.045  89.719  67.374 -0.06 -0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.865  89.169  67.875 +0.11 -0.09    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       7.018  89.812  68.696 +0.04 +0.15    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.850  88.916  69.047 -0.04 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.168  90.946  69.099 -0.04 -0.22    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.328  87.500  68.650 -0.04 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.384  87.817  67.566 -0.02 +0.08    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       5.195  86.690  68.074 +0.07 +0.40    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.938  85.589  68.532 -0.14 -0.68    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.535  87.136  67.151 -0.23 -0.80    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 4 of 20
+Run: 4 Seed: 505981608 1588658645 [ Run 4 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.830
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.180 89.258 68.079 quatxyzw -0.192696 -0.260482 -0.790112 -0.520326 center 2.234 1.640 0.158 ntor 2 67.9987 -167.9589
+State:	  8.180  89.258  68.079  -0.226 -0.305 -0.925 -117.292     68.00 -167.96
+
+DOCKED: MODEL        4
+DOCKED: USER    Run = 4
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.03 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    5.98 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.63 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.35 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.28 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.20 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.20 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.179991 89.257630 68.078563
+DOCKED: USER    NEWDPF quaternion0 -0.192696 -0.260482 -0.790112 -0.520326
+DOCKED: USER    NEWDPF axisangle0 -0.225648 -0.305026 -0.925225 -117.291707
+DOCKED: USER    NEWDPF quat0 -0.225648 -0.305026 -0.925225 -117.291707
+DOCKED: USER    NEWDPF dihe0 68.00 -167.96 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.399  87.421  69.199 -0.70 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.230  88.315  68.521 -0.21 +0.02    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.018  89.445  67.666 -0.25 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.106  90.122  67.113 -0.27 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      10.893  91.210  66.289 -0.16 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      11.947  91.865  65.755 -0.06 +0.03    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.602  91.628  66.003 -0.14 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.518  90.970  66.548 -0.09 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.713  89.875  67.378 -0.05 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.618  89.207  67.924 +0.11 -0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.906  89.650  68.974 +0.04 +0.17    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.798  88.673  69.303 -0.03 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.120  90.683  69.573 -0.03 -0.26    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.203  87.378  68.560 -0.05 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.088  87.934  67.421 -0.02 +0.09    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       4.992  86.674  68.005 +0.11 +0.43    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.343  87.191  67.111 -0.31 -0.76    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.662  85.588  68.449 -0.23 -0.74    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 5 of 20
+Run: 5 Seed: 1341111645 904285617 [ Run 5 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.809
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.248 89.238 68.084 quatxyzw -0.185626 -0.256793 -0.797932 -0.512742 center 2.234 1.640 0.158 ntor 2 -114.2542 -167.4873
+State:	  8.248  89.238  68.084  -0.216 -0.299 -0.929 -118.307   -114.25 -167.49
+
+DOCKED: MODEL        5
+DOCKED: USER    Run = 5
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.02 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    6.17 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.61 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.29 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.32 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.20 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.20 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.248032 89.238005 68.083968
+DOCKED: USER    NEWDPF quaternion0 -0.185626 -0.256793 -0.797932 -0.512742
+DOCKED: USER    NEWDPF axisangle0 -0.216210 -0.299104 -0.929403 -118.306687
+DOCKED: USER    NEWDPF quat0 -0.216210 -0.299104 -0.929403 -118.306687
+DOCKED: USER    NEWDPF dihe0 -114.25 -167.49 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.418  87.346  69.209 -0.68 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.274  88.253  68.541 -0.21 +0.03    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.095  89.398  67.700 -0.26 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.203  90.063  67.173 -0.28 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      11.021  91.167  66.361 -0.18 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      12.094  91.810  65.852 -0.06 +0.02    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.742  91.612  66.064 -0.15 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.638  90.965  66.583 -0.10 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.802  89.856  67.400 -0.05 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.687  89.199  67.921 +0.11 -0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.963  89.645  68.961 +0.04 +0.16    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.835  88.682  69.262 -0.03 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.182  90.670  69.572 -0.03 -0.26    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.234  87.387  68.517 -0.05 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.148  87.938  67.398 -0.02 +0.09    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       5.024  86.706  67.934 +0.14 +0.44    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.693  85.602  68.334 -0.19 -0.79    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.375  87.257  67.061 -0.30 -0.77    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 6 of 20
+Run: 6 Seed: 1224774955 400607347 [ Run 6 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.780
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.153 89.216 68.068 quatxyzw 0.198944 0.273321 0.776678 0.531497 center 2.234 1.640 0.158 ntor 2 62.1630 -169.7232
+State:	  8.153  89.216  68.068   0.235  0.323  0.917 115.787     62.16 -169.72
+
+DOCKED: MODEL        6
+DOCKED: USER    Run = 6
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -2.98 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    6.56 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.57 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.29 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.29 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.21 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.21 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.153313 89.216369 68.067558
+DOCKED: USER    NEWDPF quaternion0 0.198944 0.273321 0.776678 0.531497
+DOCKED: USER    NEWDPF axisangle0 0.234864 0.322670 0.916909 115.786734
+DOCKED: USER    NEWDPF quat0 0.234864 0.322670 0.916909 115.786734
+DOCKED: USER    NEWDPF dihe0 62.16 -169.72 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.441  87.488  69.224 -0.69 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.237  88.356  68.521 -0.21 +0.02    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1       9.981  89.452  67.635 -0.25 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.042  90.148  67.054 -0.27 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      10.787  91.204  66.200 -0.15 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      11.814  91.877  65.638 -0.05 +0.03    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.481  91.570  65.912 -0.14 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.423  90.893  66.484 -0.09 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.661  89.830  67.345 -0.04 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.592  89.142  67.919 +0.11 -0.11    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.895  89.576  68.983 +0.04 +0.17    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.815  88.579  69.341 -0.02 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.101  90.617  69.570 -0.03 -0.26    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.230  87.288  68.597 -0.05 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.078  87.856  67.435 -0.02 +0.10    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       5.023  86.556  68.072 +0.09 +0.44    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.283  87.097  67.268 -0.36 -0.72    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.785  85.422  68.452 -0.16 -0.80    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 7 of 20
+Run: 7 Seed: 675299752 1296193349 [ Run 7 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.820
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.281 89.234 68.176 quatxyzw 0.185381 0.248097 0.806854 0.503059 center 2.234 1.640 0.158 ntor 2 -119.1191 -162.3505
+State:	  8.281  89.234  68.176   0.214  0.287  0.934 119.595   -119.12 -162.35
+
+DOCKED: MODEL        7
+DOCKED: USER    Run = 7
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    5.91 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.64 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.39 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.25 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.18 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.18 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.280870 89.233876 68.176308
+DOCKED: USER    NEWDPF quaternion0 0.185381 0.248097 0.806854 0.503059
+DOCKED: USER    NEWDPF axisangle0 0.214499 0.287066 0.933586 119.594760
+DOCKED: USER    NEWDPF quat0 0.214499 0.287066 0.933586 119.594760
+DOCKED: USER    NEWDPF dihe0 -119.12 -162.35 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.398  87.266  69.272 -0.65 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.279  88.186  68.618 -0.20 +0.03    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.131  89.349  67.794 -0.27 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.257  89.991  67.276 -0.28 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      11.106  91.111  66.482 -0.19 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      12.196  91.732  65.981 -0.07 +0.02    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.840  91.595  66.191 -0.15 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.719  90.972  66.701 -0.10 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.852  89.846  67.501 -0.06 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.719  89.213  68.013 +0.11 -0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.950  89.712  68.996 +0.03 +0.17    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.816  88.761  69.304 -0.03 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.139  90.772  69.555 -0.03 -0.27    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.251  87.428  68.651 -0.04 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.207  87.921  67.541 -0.02 +0.09    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       5.069  86.707  68.059 +0.07 +0.41    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.780  85.587  68.448 -0.19 -0.73    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.400  87.241  67.191 -0.31 -0.72    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 8 of 20
+Run: 8 Seed: 493316240 1904158503 [ Run 8 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.819
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.202 89.278 68.028 quatxyzw -0.196099 -0.269701 -0.788621 -0.516608 center 2.234 1.640 0.158 ntor 2 -113.6702 -166.3312
+State:	  8.202  89.278  68.028  -0.229 -0.315 -0.921 -117.790   -113.67 -166.33
+
+DOCKED: MODEL        8
+DOCKED: USER    Run = 8
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.03 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    6.06 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.62 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.32 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.30 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.20 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.20 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.202354 89.277926 68.027957
+DOCKED: USER    NEWDPF quaternion0 -0.196099 -0.269701 -0.788621 -0.516608
+DOCKED: USER    NEWDPF axisangle0 -0.229028 -0.314989 -0.921047 -117.790070
+DOCKED: USER    NEWDPF quat0 -0.229028 -0.314989 -0.921047 -117.790070
+DOCKED: USER    NEWDPF dihe0 -113.67 -166.33 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.411  87.459  69.198 -0.71 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.247  88.340  68.501 -0.21 +0.02    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.043  89.452  67.622 -0.25 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.136  90.115  67.061 -0.27 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      10.930  91.187  66.214 -0.16 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      11.989  91.828  65.673 -0.06 +0.03    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.642  91.602  65.913 -0.14 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.553  90.958  66.465 -0.09 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.741  89.880  67.318 -0.04 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.641  89.225  67.871 +0.11 -0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.905  89.706  68.888 +0.04 +0.16    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.799  88.735  69.237 -0.03 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.100  90.766  69.446 -0.03 -0.26    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.229  87.413  68.558 -0.05 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.131  87.927  67.413 -0.02 +0.09    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       5.035  86.675  68.011 +0.11 +0.43    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.723  85.591  68.474 -0.21 -0.72    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.381  87.161  67.104 -0.30 -0.80    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 9 of 20
+Run: 9 Seed: 749899075 78553567 [ Run 9 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.718
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.347 89.252 67.962 quatxyzw 0.187983 0.279139 0.804714 0.489059 center 2.234 1.640 0.158 ntor 2 73.3198 -176.4034
+State:	  8.347  89.252  67.962   0.216  0.320  0.923 121.443     73.32 -176.40
+
+DOCKED: MODEL        9
+DOCKED: USER    Run = 9
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -2.91 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    7.36 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.51 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.34 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.16 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.21 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.21 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.346824 89.251757 67.962062
+DOCKED: USER    NEWDPF quaternion0 0.187983 0.279139 0.804714 0.489059
+DOCKED: USER    NEWDPF axisangle0 0.215515 0.320021 0.922572 121.442531
+DOCKED: USER    NEWDPF quat0 0.215515 0.320021 0.922572 121.442531
+DOCKED: USER    NEWDPF dihe0 73.32 -176.40 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.404  87.332  69.241 -0.67 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.318  88.213  68.531 -0.21 +0.03    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.210  89.327  67.636 -0.27 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.360  89.926  67.119 -0.27 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      11.247  90.999  66.256 -0.19 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      12.360  91.579  65.756 -0.07 +0.02    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.997  91.477  65.895 -0.14 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.853  90.896  66.403 -0.09 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.947  89.818  67.272 -0.05 -0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.791  89.227  67.781 +0.11 -0.09    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       7.146  89.648  68.883 +0.04 +0.15    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.941  88.773  69.148 -0.03 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.482  90.593  69.565 -0.03 -0.22    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.190  87.514  68.285 -0.05 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.116  88.071  67.179 -0.02 +0.09    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       4.901  87.000  67.697 +0.15 +0.44    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.353  87.616  66.798 -0.27 -0.65    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.407  85.969  68.119 -0.27 -0.77    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 10 of 20
+Run: 10 Seed: 1308227959 307946608 [ Run 10 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.827
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.163 89.242 68.048 quatxyzw -0.191429 -0.266225 -0.786048 -0.524031 center 2.234 1.640 0.158 ntor 2 -107.4620 -169.7488
+State:	  8.163  89.242  68.048  -0.225 -0.313 -0.923 -116.794   -107.46 -169.75
+
+DOCKED: MODEL       10
+DOCKED: USER    Run = 10
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.03 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    6.04 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.62 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.29 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.33 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.20 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.20 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.163268 89.241910 68.048460
+DOCKED: USER    NEWDPF quaternion0 -0.191429 -0.266225 -0.786048 -0.524031
+DOCKED: USER    NEWDPF axisangle0 -0.224761 -0.312581 -0.922917 -116.793986
+DOCKED: USER    NEWDPF quat0 -0.224761 -0.312581 -0.922917 -116.793986
+DOCKED: USER    NEWDPF dihe0 -107.46 -169.75 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.401  87.444  69.194 -0.70 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.223  88.330  68.508 -0.21 +0.02    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.000  89.450  67.642 -0.25 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.082  90.136  67.089 -0.27 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      10.859  91.214  66.254 -0.16 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      11.906  91.878  65.719 -0.06 +0.03    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.564  91.613  65.959 -0.14 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.486  90.945  66.505 -0.09 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.692  89.860  67.345 -0.04 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.602  89.182  67.892 +0.11 -0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.901  89.608  68.957 +0.04 +0.16    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.798  88.626  69.281 -0.02 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.122  90.631  69.569 -0.03 -0.26    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.196  87.343  68.514 -0.05 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.068  87.917  67.374 -0.02 +0.10    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       4.980  86.647  67.960 +0.15 +0.45    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.606  85.593  68.446 -0.25 -0.73    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.369  87.138  67.025 -0.29 -0.85    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 11 of 20
+Run: 11 Seed: 468293140 1417721371 [ Run 11 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.836
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.203 89.246 68.103 quatxyzw -0.190320 -0.253347 -0.795170 -0.517009 center 2.234 1.640 0.158 ntor 2 -111.8945 -165.9746
+State:	  8.203  89.246  68.103  -0.222 -0.296 -0.929 -117.736   -111.89 -165.97
+
+DOCKED: MODEL       11
+DOCKED: USER    Run = 11
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    5.86 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.64 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.35 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.29 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.19 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.19 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.203085 89.246275 68.103314
+DOCKED: USER    NEWDPF quaternion0 -0.190320 -0.253347 -0.795170 -0.517009
+DOCKED: USER    NEWDPF axisangle0 -0.222341 -0.295973 -0.928959 -117.736305
+DOCKED: USER    NEWDPF quat0 -0.222341 -0.295973 -0.928959 -117.736305
+DOCKED: USER    NEWDPF dihe0 -111.89 -165.97 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.400  87.366  69.196 -0.69 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.242  88.273  68.531 -0.21 +0.02    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.043  89.418  67.693 -0.26 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.140  90.090  67.151 -0.28 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      10.940  91.193  66.343 -0.17 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      12.001  91.843  65.819 -0.06 +0.02    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.654  91.630  66.064 -0.14 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.562  90.977  66.598 -0.10 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.744  89.868  67.412 -0.05 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.640  89.204  67.948 +0.11 -0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.910  89.659  68.981 +0.04 +0.17    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.799  88.685  69.303 -0.03 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.114  90.700  69.570 -0.03 -0.27    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.217  87.382  68.583 -0.05 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.120  87.925  67.452 -0.02 +0.09    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       5.017  86.669  68.016 +0.10 +0.43    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.679  85.588  68.469 -0.23 -0.72    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.383  87.173  67.104 -0.30 -0.79    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 12 of 20
+Run: 12 Seed: 12127086 1486796348 [ Run 12 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.942
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 13.249 99.806 56.205 quatxyzw -0.651662 0.177168 0.409720 -0.613251 center 2.234 1.640 0.158 ntor 2 -27.4216 -41.7899
+State:	 13.249  99.806  56.205  -0.825  0.224  0.519 -104.350    -27.42  -41.79
+
+DOCKED: MODEL       12
+DOCKED: USER    Run = 12
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.44 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    3.02 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -4.03 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -3.69 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.35 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.09 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.09 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 13.248649 99.806271 56.204828
+DOCKED: USER    NEWDPF quaternion0 -0.651662 0.177168 0.409720 -0.613251
+DOCKED: USER    NEWDPF axisangle0 -0.825006 0.224296 0.518706 -104.350075
+DOCKED: USER    NEWDPF quat0 -0.825006 0.224296 0.518706 -104.350075
+DOCKED: USER    NEWDPF dihe0 -27.42 -41.79 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      11.863  99.422  53.469 -0.21 -0.04    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      11.709  99.272  54.583 -0.28 +0.03    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      11.512  99.085  55.990 -0.30 +0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      10.280  98.642  56.474 -0.36 +0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      10.098  98.463  57.832 -0.31 +0.01    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1       8.906  98.034  58.299 -0.05 -0.06    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1      11.137  98.715  58.715 -0.32 -0.00    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1      12.358  99.159  58.249 -0.27 -0.00    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1      12.558  99.344  56.888 -0.15 +0.01    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1      13.794  99.787  56.416 +0.09 -0.04    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1      14.977  99.265  56.782 +0.05 +0.04    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1      16.106  99.992  56.086 -0.44 -0.00    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1      15.119  98.345  57.559 -0.02 -0.07    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1      15.454 101.296  55.567 -0.41 +0.02    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1      13.970 100.878  55.450 -0.13 -0.01    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1      16.011 101.679  54.221 -0.11 -0.01    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1      17.150 101.363  53.920 -0.60 -0.24    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1      15.323 102.306  53.433 +0.12 +0.00    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 13 of 20
+Run: 13 Seed: 1665135585 1623724974 [ Run 13 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.830
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.196 89.259 68.088 quatxyzw 0.191808 0.259357 0.791403 0.519254 center 2.234 1.640 0.158 ntor 2 -112.5117 -167.3672
+State:	  8.196  89.259  68.088   0.224  0.303  0.926 117.436   -112.51 -167.37
+
+DOCKED: MODEL       13
+DOCKED: USER    Run = 13
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    5.96 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.63 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.35 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.28 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.20 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.20 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.195819 89.258856 68.087601
+DOCKED: USER    NEWDPF quaternion0 0.191808 0.259357 0.791403 0.519254
+DOCKED: USER    NEWDPF axisangle0 0.224437 0.303477 0.926029 117.435499
+DOCKED: USER    NEWDPF quat0 0.224437 0.303477 0.926029 117.435499
+DOCKED: USER    NEWDPF dihe0 -112.51 -167.37 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.408  87.412  69.205 -0.69 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.242  88.309  68.530 -0.21 +0.02    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.035  89.442  67.678 -0.25 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.126  90.117  67.128 -0.27 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      10.917  91.208  66.307 -0.17 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      11.973  91.862  65.776 -0.06 +0.03    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.628  91.631  66.021 -0.14 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.541  90.975  66.562 -0.10 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.732  89.877  67.389 -0.05 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.633  89.210  67.932 +0.11 -0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.915  89.658  68.976 +0.04 +0.17    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.806  88.682  69.302 -0.03 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.125  90.694  69.570 -0.03 -0.26    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.217  87.383  68.569 -0.05 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.108  87.934  67.432 -0.02 +0.09    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       5.010  86.675  68.010 +0.11 +0.43    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.683  85.586  68.451 -0.23 -0.73    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.361  87.191  67.116 -0.31 -0.77    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 14 of 20
+Run: 14 Seed: 714265468 1752036375 [ Run 14 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.540
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 10.522 89.763 66.667 quatxyzw 0.134666 -0.625394 0.764584 0.078475 center 2.234 1.640 0.158 ntor 2 145.6941 -157.4974
+State:	 10.522  89.763  66.667   0.135 -0.627  0.767 170.998    145.69 -157.50
+
+DOCKED: MODEL       14
+DOCKED: USER    Run = 14
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -2.78 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    9.12 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.38 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.88 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.50 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.16 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.16 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 10.521537 89.762523 66.666792
+DOCKED: USER    NEWDPF quaternion0 0.134666 -0.625394 0.764584 0.078475
+DOCKED: USER    NEWDPF axisangle0 0.135082 -0.627329 0.766949 170.998129
+DOCKED: USER    NEWDPF quat0 0.135082 -0.627329 0.766949 170.998129
+DOCKED: USER    NEWDPF dihe0 145.69 -157.50 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1       9.268  89.003  63.945 -0.04 +0.26    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.222  89.399  64.416 -0.09 -0.18    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      11.428  89.896  65.010 -0.21 -0.01    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      12.565  90.099  64.227 -0.31 -0.02    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      13.723  90.579  64.807 -0.28 -0.01    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      14.823  90.775  64.048 -0.12 -0.02    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1      13.758  90.868  66.163 -0.38 -0.00    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1      12.641  90.667  66.949 -0.34 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1      11.469  90.185  66.383 -0.17 -0.06    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1      10.339  89.986  67.176 +0.06 +0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1      10.244  89.055  68.140 -0.04 -0.01    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       8.879  89.115  68.790 -0.15 +0.01    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1      11.124  88.278  68.445 -0.65 -0.11    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       8.024  89.940  67.800 -0.12 -0.01    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       9.105  90.773  67.072 -0.07 -0.01    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       7.061  90.836  68.535 -0.01 +0.15    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       6.797  91.942  68.092 +0.02 -0.19    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       6.546  90.456  69.572 +0.02 -0.37    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 15 of 20
+Run: 15 Seed: 343522999 233661372 [ Run 15 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.831
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.213 89.267 68.112 quatxyzw 0.189255 0.254700 0.796203 0.515142 center 2.234 1.640 0.158 ntor 2 64.8720 -165.1242
+State:	  8.213  89.267  68.112   0.221  0.297  0.929 117.986     64.87 -165.12
+
+DOCKED: MODEL       15
+DOCKED: USER    Run = 15
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.04 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    5.90 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.64 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.36 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.28 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.19 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.19 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.212794 89.267370 68.111839
+DOCKED: USER    NEWDPF quaternion0 0.189255 0.254700 0.796203 0.515142
+DOCKED: USER    NEWDPF axisangle0 0.220808 0.297163 0.928945 117.986076
+DOCKED: USER    NEWDPF quat0 0.220808 0.297163 0.928945 117.986076
+DOCKED: USER    NEWDPF dihe0 64.87 -165.12 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.399  87.382  69.216 -0.68 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.247  88.288  68.550 -0.21 +0.02    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.055  89.433  67.710 -0.26 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.156  90.101  67.171 -0.28 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      10.963  91.204  66.361 -0.17 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      12.029  91.850  65.841 -0.06 +0.02    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.680  91.645  66.076 -0.14 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.583  90.995  66.606 -0.10 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.759  89.886  67.422 -0.05 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.650  89.227  67.954 +0.11 -0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.908  89.693  68.973 +0.04 +0.17    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.795  88.720  69.294 -0.03 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.102  90.742  69.550 -0.03 -0.27    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.225  87.409  68.597 -0.05 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.140  87.940  67.468 -0.02 +0.09    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       5.034  86.686  68.025 +0.09 +0.42    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.373  87.202  67.139 -0.31 -0.75    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.729  85.583  68.449 -0.21 -0.74    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 16 of 20
+Run: 16 Seed: 1570955947 1879716392 [ Run 16 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.831
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.217 89.250 68.141 quatxyzw -0.189042 -0.247938 -0.798163 -0.515485 center 2.234 1.640 0.158 ntor 2 -115.2099 -163.3109
+State:	  8.217  89.250  68.141  -0.221 -0.289 -0.931 -117.940   -115.21 -163.31
+
+DOCKED: MODEL       16
+DOCKED: USER    Run = 16
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.05 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    5.82 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.65 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.35 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.29 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.19 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.19 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.217082 89.249503 68.141233
+DOCKED: USER    NEWDPF quaternion0 -0.189042 -0.247938 -0.798163 -0.515485
+DOCKED: USER    NEWDPF axisangle0 -0.220612 -0.289344 -0.931456 -117.940209
+DOCKED: USER    NEWDPF quat0 -0.220612 -0.289344 -0.931456 -117.940209
+DOCKED: USER    NEWDPF dihe0 -115.21 -163.31 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.403  87.343  69.209 -0.68 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.250  88.257  68.555 -0.21 +0.03    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.058  89.413  67.730 -0.26 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.158  90.083  67.193 -0.28 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      10.964  91.196  66.398 -0.17 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      12.029  91.844  65.879 -0.06 +0.02    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.681  91.646  66.125 -0.14 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.585  90.994  66.655 -0.10 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.761  89.875  67.456 -0.05 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.654  89.213  67.987 +0.11 -0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.898  89.686  68.992 +0.04 +0.17    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.790  88.709  69.317 -0.03 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.078  90.744  69.558 -0.03 -0.27    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.238  87.392  68.640 -0.04 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.158  87.915  67.513 -0.02 +0.09    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       5.057  86.652  68.068 +0.07 +0.42    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.758  85.552  68.501 -0.19 -0.72    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.400  87.152  67.171 -0.30 -0.77    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 17 of 20
+Run: 17 Seed: 2082458788 491560531 [ Run 17 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.833
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.219 89.267 68.113 quatxyzw 0.189086 0.250790 0.797951 0.514417 center 2.234 1.640 0.158 ntor 2 -115.1844 -164.3428
+State:	  8.219  89.267  68.113   0.220  0.292  0.931 118.083   -115.18 -164.34
+
+DOCKED: MODEL       17
+DOCKED: USER    Run = 17
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.05 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    5.84 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.64 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.36 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.28 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.19 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.19 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.219403 89.267317 68.112722
+DOCKED: USER    NEWDPF quaternion0 0.189086 0.250790 0.797951 0.514417
+DOCKED: USER    NEWDPF axisangle0 0.220498 0.292452 0.930512 118.082988
+DOCKED: USER    NEWDPF quat0 0.220498 0.292452 0.930512 118.082988
+DOCKED: USER    NEWDPF dihe0 -115.18 -164.34 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.401  87.365  69.198 -0.69 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.250  88.276  68.538 -0.21 +0.02    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.061  89.428  67.707 -0.26 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.164  90.095  67.170 -0.28 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      10.973  91.204  66.368 -0.17 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      12.040  91.849  65.850 -0.06 +0.02    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.691  91.652  66.090 -0.14 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.593  91.004  66.618 -0.10 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.766  89.889  67.426 -0.05 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.656  89.230  67.956 +0.11 -0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.910  89.700  68.970 +0.04 +0.17    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.796  88.727  69.292 -0.03 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.100  90.751  69.545 -0.03 -0.27    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.231  87.413  68.600 -0.05 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.149  87.941  67.474 -0.02 +0.09    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       5.042  86.687  68.027 +0.09 +0.42    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.736  85.586  68.453 -0.21 -0.73    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.384  87.201  67.138 -0.30 -0.76    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 18 of 20
+Run: 18 Seed: 1572393906 1670411068 [ Run 18 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.816
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.276 89.227 68.184 quatxyzw -0.185393 -0.260774 -0.801923 -0.504525 center 2.234 1.640 0.158 ntor 2 -118.7026 -164.1946
+State:	  8.276  89.227  68.184  -0.215 -0.302 -0.929 -119.400   -118.70 -164.19
+
+DOCKED: MODEL       18
+DOCKED: USER    Run = 18
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.03 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    6.02 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.63 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.37 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.25 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.19 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.19 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 8.276087 89.227174 68.183823
+DOCKED: USER    NEWDPF quaternion0 -0.185393 -0.260774 -0.801923 -0.504525
+DOCKED: USER    NEWDPF axisangle0 -0.214725 -0.302032 -0.928800 -119.400367
+DOCKED: USER    NEWDPF quat0 -0.214725 -0.302032 -0.928800 -119.400367
+DOCKED: USER    NEWDPF dihe0 -118.70 -164.19 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1      10.405  87.310  69.344 -0.64 -0.11    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.282  88.214  68.669 -0.21 +0.03    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      10.129  89.356  67.818 -0.27 -0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.252  90.000  67.297 -0.28 -0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      11.096  91.100  66.476 -0.19 -0.02    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      12.184  91.723  65.973 -0.07 +0.02    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1       9.827  91.563  66.162 -0.15 -0.01    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1       8.709  90.938  66.675 -0.10 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1       8.847  89.831  67.501 -0.06 +0.00    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1       7.716  89.196  68.015 +0.11 -0.10    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1       6.952  89.692  69.003 +0.04 +0.17    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       5.819  88.739  69.313 -0.03 +0.03    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1       7.143  90.749  69.566 -0.03 -0.27    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       6.251  87.409  68.654 -0.04 -0.03    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       7.203  87.905  67.541 -0.02 +0.09    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       5.066  86.689  68.064 +0.07 +0.41    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       4.775  85.571  68.455 -0.19 -0.74    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       4.398  87.224  67.195 -0.31 -0.73    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 19 of 20
+Run: 19 Seed: 174393161 989531214 [ Run 19 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -4.073
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 11.749 98.658 57.782 quatxyzw -0.506471 0.605097 -0.609066 0.079896 center 2.234 1.640 0.158 ntor 2 -47.6724 20.4572
+State:	 11.749  98.658  57.782  -0.508  0.607 -0.611 170.835    -47.67   20.46
+
+DOCKED: MODEL       19
+DOCKED: USER    Run = 19
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.35 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    3.51 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.95 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -3.66 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.29 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.13 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.13 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 11.749063 98.658062 57.782121
+DOCKED: USER    NEWDPF quaternion0 -0.506471 0.605097 -0.609066 0.079896
+DOCKED: USER    NEWDPF axisangle0 -0.508095 0.607037 -0.611019 170.834855
+DOCKED: USER    NEWDPF quat0 -0.508095 0.607037 -0.611019 170.834855
+DOCKED: USER    NEWDPF dihe0 -47.67 20.46 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1       9.090  97.483  56.733 -0.53 -0.37    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1       9.971  98.129  56.424 -0.27 +0.09    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      11.083  98.942  56.033 -0.31 +0.00    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      11.196  99.392  54.717 -0.34 +0.01    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      12.272 100.177  54.348 -0.30 +0.01    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      12.381 100.611  53.073 -0.18 -0.01    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1      13.235 100.525  55.282 -0.33 +0.00    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1      13.137 100.083  56.585 -0.28 +0.00    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1      12.064  99.294  56.974 -0.16 +0.01    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1      11.962  98.851  58.292 +0.12 +0.03    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1      11.035  99.279  59.167 -0.00 -0.11    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1      11.225  98.596  60.503 -0.26 -0.05    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1      10.173 100.095  58.920 -0.04 +0.03    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1      12.652  98.005  60.427 -0.29 +0.02    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1      12.847  97.850  58.901 -0.24 -0.01    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1      12.719  96.666  61.115 -0.06 -0.14    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1      12.260  96.533  62.237 +0.08 +0.30    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1      13.232  95.715  60.549 -0.27 -0.10    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 20 of 20
+Run: 20 Seed: 1488359230 1227105097 [ Run 20 of 20 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -3.529
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 10.396 89.645 66.733 quatxyzw 0.154666 -0.635883 0.752774 0.071151 center 2.234 1.640 0.158 ntor 2 127.5804 -153.5744
+State:	 10.396  89.645  66.733   0.155 -0.637  0.755 171.840    127.58 -153.57
+
+DOCKED: MODEL       20
+DOCKED: USER    Run = 20
+DOCKED: USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -2.80 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    8.87 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -3.40 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -2.83 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.57 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.13 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.13 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_1.pdbqt
+DOCKED: USER    NEWDPF about 2.234000 1.640000 0.158000
+DOCKED: USER    NEWDPF tran0 10.395932 89.644903 66.733417
+DOCKED: USER    NEWDPF quaternion0 0.154666 -0.635883 0.752774 0.071151
+DOCKED: USER    NEWDPF axisangle0 0.155059 -0.637498 0.754687 171.839758
+DOCKED: USER    NEWDPF quat0 0.155059 -0.637498 0.754687 171.839758
+DOCKED: USER    NEWDPF dihe0 127.58 -153.57 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  2 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C9_9  and  N10_10 
+DOCKED: REMARK    2  A    between atoms: C12_14  and  C14_16 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  N1  ZIN A   1       9.032  88.938  64.051 -0.03 +0.21    -0.390 NA
+DOCKED: ATOM      2  C2  ZIN A   1      10.001  89.334  64.490 -0.10 -0.17    +0.250 C 
+DOCKED: ATOM      3  C3  ZIN A   1      11.225  89.833  65.042 -0.20 -0.01    +0.010 A 
+DOCKED: ATOM      4  C4  ZIN A   1      12.324  90.070  64.215 -0.30 -0.02    +0.050 A 
+DOCKED: ATOM      5  C5  ZIN A   1      13.501  90.552  64.755 -0.29 -0.01    +0.100 A 
+DOCKED: ATOM      6  F6  ZIN A   1      14.564  90.781  63.954 -0.14 -0.02    -0.130 F 
+DOCKED: ATOM      7  C7  ZIN A   1      13.592  90.806  66.115 -0.38 -0.00    +0.030 A 
+DOCKED: ATOM      8  C8  ZIN A   1      12.515  90.570  66.944 -0.34 -0.01    +0.070 A 
+DOCKED: ATOM      9  C9  ZIN A   1      11.325  90.087  66.419 -0.16 -0.06    +0.190 A 
+DOCKED: ENDROOT
+DOCKED: BRANCH   9  10
+DOCKED: ATOM     10  N10 ZIN A   1      10.234  89.853  67.256 +0.06 +0.09    -0.600 N 
+DOCKED: ATOM     11  C18 ZIN A   1      10.220  88.947  68.249 -0.05 +0.00    +0.530 C 
+DOCKED: ATOM     12  C17 ZIN A   1       8.876  88.955  68.943 -0.15 +0.01    +0.090 C 
+DOCKED: ATOM     13  O19 ZIN A   1      11.150  88.227  68.544 -0.66 -0.14    -0.530 OA
+DOCKED: ATOM     14  C12 ZIN A   1       7.947  89.705  67.961 -0.10 -0.01    -0.070 C 
+DOCKED: ATOM     15  C11 ZIN A   1       8.956  90.571  67.173 -0.06 -0.01    +0.280 C 
+DOCKED: BRANCH  14  16
+DOCKED: ATOM     16  C14 ZIN A   1       6.962  90.570  68.703 -0.00 +0.17    +0.500 C 
+DOCKED: ATOM     17  O15 ZIN A   1       6.870  91.757  68.435 +0.05 -0.25    -0.680 OA
+DOCKED: ATOM     18  O16 ZIN A   1       6.258  90.085  69.572 +0.02 -0.34    -0.690 OA
+DOCKED: ENDBRANCH  14  16
+DOCKED: ENDBRANCH   9  10
+DOCKED: TORSDOF 2
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+DPF> analysis                             # perform a ranked cluster analysis
+
+
+		CLUSTER ANALYSIS OF CONFORMATIONS
+		_________________________________
+
+Number of conformations = 20
+
+RMSD cluster analysis will be performed using the ligand atoms only (18 / 18 total atoms).
+
+Outputting structurally similar clusters, ranked in order of increasing energy.
+
+
+________________________________________________________________________________
+
+Number of distinct conformational clusters found = 4,  out of 20 runs,
+Using an rmsd-tolerance of 2.0 A
+
+
+	CLUSTERING HISTOGRAM
+	____________________
+
+________________________________________________________________________________
+     |           |     |           |     |                                    
+Clus | Lowest    | Run | Mean      | Num | Histogram                          
+-ter | Binding   |     | Binding   | in  |                                    
+Rank | Energy    |     | Energy    | Clus|    5    10   15   20   25   30   35
+_____|___________|_____|___________|_____|____:____|____:____|____:____|____:___
+   1 |     -3.44 |  12 |     -3.44 |   1 |#
+   2 |     -3.35 |  19 |     -3.35 |   1 |#
+   3 |     -3.05 |  16 |     -3.02 |  16 |################
+   4 |     -2.80 |  20 |     -2.79 |   2 |##
+_____|___________|_____|___________|_____|______________________________________
+
+
+Number of multi-member conformational clusters found = 2, out of 20 runs.
+
+	RMSD TABLE
+	__________
+
+_____________________________________________________________________
+     |      |      |           |         |                 |
+Rank | Sub- | Run  | Binding   | Cluster | Reference       | Grep
+     | Rank |      | Energy    | RMSD    | RMSD            | Pattern
+_____|______|______|___________|_________|_________________|___________
+   1      1     12       -3.44      0.00    112.20           RANKING
+   2      1     19       -3.35      0.00    112.03           RANKING
+   3      1     16       -3.05      0.00    109.59           RANKING
+   3      2     17       -3.05      0.04    109.58           RANKING
+   3      3      1       -3.05      0.06    109.56           RANKING
+   3      4     11       -3.04      0.06    109.56           RANKING
+   3      5     15       -3.04      0.04    109.58           RANKING
+   3      6      7       -3.04      0.12    109.60           RANKING
+   3      7      2       -3.04      0.08    109.58           RANKING
+   3      8     13       -3.04      0.08    109.56           RANKING
+   3      9      4       -3.03      0.10    109.55           RANKING
+   3     10     18       -3.03      0.12    109.60           RANKING
+   3     11     10       -3.03      0.14    109.52           RANKING
+   3     12      8       -3.03      0.13    109.53           RANKING
+   3     13      5       -3.02      0.10    109.54           RANKING
+   3     14      6       -2.98      0.18    109.50           RANKING
+   3     15      9       -2.91      0.38    109.49           RANKING
+   3     16      3       -2.90      0.39    109.51           RANKING
+   4      1     20       -2.80      0.00    109.75           RANKING
+   4      2     14       -2.78      0.26    109.82           RANKING
+_______________________________________________________________________
+
+
+
+	INFORMATION ENTROPY ANALYSIS FOR THIS CLUSTERING
+	________________________________________________
+
+
+Information entropy for this clustering = 0.24  (rmstol = 2.00 Angstrom)
+
+_______________________________________________________________________
+
+
+	STATISTICAL MECHANICAL ANALYSIS
+	_______________________________
+
+
+Partition function, Q =    20.10            at Temperature, T = 298.15 K
+Free energy,        A ~ -1777.95 kcal/mol   at Temperature, T = 298.15 K
+Internal energy,    U =    -3.03 kcal/mol   at Temperature, T = 298.15 K
+Entropy,            S =     5.95 kcal/mol/K at Temperature, T = 298.15 K
+
+_______________________________________________________________________
+
+
+	LOWEST ENERGY DOCKED CONFORMATION from EACH CLUSTER
+	___________________________________________________
+
+
+
+Keeping original residue number (specified in the input PDBQ file) for outputting.
+
+MODEL       12
+USER    Run = 12
+USER    Cluster Rank = 1
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 112.197 A
+USER  
+USER    Estimated Free Energy of Binding    =   -3.44 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    3.02 mM (millimolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -4.03 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -3.69 kcal/mol
+USER        Electrostatic Energy            =   -0.35 kcal/mol
+USER    (2) Final Total Internal Energy     =   +0.09 kcal/mol
+USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   +0.09 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+USER    NEWDPF move	ligand_1.pdbqt
+USER    NEWDPF about	2.234000 1.640000 0.158000
+USER    NEWDPF tran0	13.248649 99.806271 56.204828
+USER    NEWDPF axisangle0	-0.825006 0.224296 0.518706 -104.350075
+USER    NEWDPF quaternion0	-0.651662 0.177168 0.409720 -0.613251
+USER    NEWDPF dihe0	-27.42 -41.79 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  N1  ZIN A   1      11.863  99.422  53.469 -0.21 -0.04    -0.390    112.197
+ATOM      2  C2  ZIN A   1      11.709  99.272  54.583 -0.28 +0.03    +0.250    112.197
+ATOM      3  C3  ZIN A   1      11.512  99.085  55.990 -0.30 +0.00    +0.010    112.197
+ATOM      4  C4  ZIN A   1      10.280  98.642  56.474 -0.36 +0.01    +0.050    112.197
+ATOM      5  C5  ZIN A   1      10.098  98.463  57.832 -0.31 +0.01    +0.100    112.197
+ATOM      6  F6  ZIN A   1       8.906  98.034  58.299 -0.05 -0.06    -0.130    112.197
+ATOM      7  C7  ZIN A   1      11.137  98.715  58.715 -0.32 -0.00    +0.030    112.197
+ATOM      8  C8  ZIN A   1      12.358  99.159  58.249 -0.27 -0.00    +0.070    112.197
+ATOM      9  C9  ZIN A   1      12.558  99.344  56.888 -0.15 +0.01    +0.190    112.197
+ATOM     10  N10 ZIN A   1      13.794  99.787  56.416 +0.09 -0.04    -0.600    112.197
+ATOM     11  C18 ZIN A   1      14.977  99.265  56.782 +0.05 +0.04    +0.530    112.197
+ATOM     12  C17 ZIN A   1      16.106  99.992  56.086 -0.44 -0.00    +0.090    112.197
+ATOM     13  O19 ZIN A   1      15.119  98.345  57.559 -0.02 -0.07    -0.530    112.197
+ATOM     14  C12 ZIN A   1      15.454 101.296  55.567 -0.41 +0.02    -0.070    112.197
+ATOM     15  C11 ZIN A   1      13.970 100.878  55.450 -0.13 -0.01    +0.280    112.197
+ATOM     16  C14 ZIN A   1      16.011 101.679  54.221 -0.11 -0.01    +0.500    112.197
+ATOM     17  O15 ZIN A   1      17.150 101.363  53.920 -0.60 -0.24    -0.680    112.197
+ATOM     18  O16 ZIN A   1      15.323 102.306  53.433 +0.12 +0.00    -0.690    112.197
+TER
+ENDMDL
+MODEL       19
+USER    Run = 19
+USER    Cluster Rank = 2
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 112.026 A
+USER  
+USER    Estimated Free Energy of Binding    =   -3.35 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    3.51 mM (millimolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -3.95 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -3.66 kcal/mol
+USER        Electrostatic Energy            =   -0.29 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.13 kcal/mol
+USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.13 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+USER    NEWDPF move	ligand_1.pdbqt
+USER    NEWDPF about	2.234000 1.640000 0.158000
+USER    NEWDPF tran0	11.749063 98.658062 57.782121
+USER    NEWDPF axisangle0	-0.508095 0.607037 -0.611019 170.834855
+USER    NEWDPF quaternion0	-0.506471 0.605097 -0.609066 0.079896
+USER    NEWDPF dihe0	-47.67 20.46 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  N1  ZIN A   1       9.090  97.483  56.733 -0.53 -0.37    -0.390    112.026
+ATOM      2  C2  ZIN A   1       9.971  98.129  56.424 -0.27 +0.09    +0.250    112.026
+ATOM      3  C3  ZIN A   1      11.083  98.942  56.033 -0.31 +0.00    +0.010    112.026
+ATOM      4  C4  ZIN A   1      11.196  99.392  54.717 -0.34 +0.01    +0.050    112.026
+ATOM      5  C5  ZIN A   1      12.272 100.177  54.348 -0.30 +0.01    +0.100    112.026
+ATOM      6  F6  ZIN A   1      12.381 100.611  53.073 -0.18 -0.01    -0.130    112.026
+ATOM      7  C7  ZIN A   1      13.235 100.525  55.282 -0.33 +0.00    +0.030    112.026
+ATOM      8  C8  ZIN A   1      13.137 100.083  56.585 -0.28 +0.00    +0.070    112.026
+ATOM      9  C9  ZIN A   1      12.064  99.294  56.974 -0.16 +0.01    +0.190    112.026
+ATOM     10  N10 ZIN A   1      11.962  98.851  58.292 +0.12 +0.03    -0.600    112.026
+ATOM     11  C18 ZIN A   1      11.035  99.279  59.167 -0.00 -0.11    +0.530    112.026
+ATOM     12  C17 ZIN A   1      11.225  98.596  60.503 -0.26 -0.05    +0.090    112.026
+ATOM     13  O19 ZIN A   1      10.173 100.095  58.920 -0.04 +0.03    -0.530    112.026
+ATOM     14  C12 ZIN A   1      12.652  98.005  60.427 -0.29 +0.02    -0.070    112.026
+ATOM     15  C11 ZIN A   1      12.847  97.850  58.901 -0.24 -0.01    +0.280    112.026
+ATOM     16  C14 ZIN A   1      12.719  96.666  61.115 -0.06 -0.14    +0.500    112.026
+ATOM     17  O15 ZIN A   1      12.260  96.533  62.237 +0.08 +0.30    -0.680    112.026
+ATOM     18  O16 ZIN A   1      13.232  95.715  60.549 -0.27 -0.10    -0.690    112.026
+TER
+ENDMDL
+MODEL       16
+USER    Run = 16
+USER    Cluster Rank = 3
+USER    Number of conformations in this cluster = 16
+USER  
+USER    RMSD from reference structure       = 109.585 A
+USER  
+USER    Estimated Free Energy of Binding    =   -3.05 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    5.82 mM (millimolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -3.65 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -2.35 kcal/mol
+USER        Electrostatic Energy            =   -1.29 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.19 kcal/mol
+USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.19 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+USER    NEWDPF move	ligand_1.pdbqt
+USER    NEWDPF about	2.234000 1.640000 0.158000
+USER    NEWDPF tran0	8.217082 89.249503 68.141233
+USER    NEWDPF axisangle0	-0.220612 -0.289344 -0.931456 -117.940209
+USER    NEWDPF quaternion0	-0.189042 -0.247938 -0.798163 -0.515485
+USER    NEWDPF dihe0	-115.21 -163.31 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  N1  ZIN A   1      10.403  87.343  69.209 -0.68 -0.11    -0.390    109.585
+ATOM      2  C2  ZIN A   1      10.250  88.257  68.555 -0.21 +0.03    +0.250    109.585
+ATOM      3  C3  ZIN A   1      10.058  89.413  67.730 -0.26 -0.00    +0.010    109.585
+ATOM      4  C4  ZIN A   1      11.158  90.083  67.193 -0.28 -0.01    +0.050    109.585
+ATOM      5  C5  ZIN A   1      10.964  91.196  66.398 -0.17 -0.02    +0.100    109.585
+ATOM      6  F6  ZIN A   1      12.029  91.844  65.879 -0.06 +0.02    -0.130    109.585
+ATOM      7  C7  ZIN A   1       9.681  91.646  66.125 -0.14 -0.01    +0.030    109.585
+ATOM      8  C8  ZIN A   1       8.585  90.994  66.655 -0.10 -0.01    +0.070    109.585
+ATOM      9  C9  ZIN A   1       8.761  89.875  67.456 -0.05 +0.00    +0.190    109.585
+ATOM     10  N10 ZIN A   1       7.654  89.213  67.987 +0.11 -0.10    -0.600    109.585
+ATOM     11  C18 ZIN A   1       6.898  89.686  68.992 +0.04 +0.17    +0.530    109.585
+ATOM     12  C17 ZIN A   1       5.790  88.709  69.317 -0.03 +0.03    +0.090    109.585
+ATOM     13  O19 ZIN A   1       7.078  90.744  69.558 -0.03 -0.27    -0.530    109.585
+ATOM     14  C12 ZIN A   1       6.238  87.392  68.640 -0.04 -0.03    -0.070    109.585
+ATOM     15  C11 ZIN A   1       7.158  87.915  67.513 -0.02 +0.09    +0.280    109.585
+ATOM     16  C14 ZIN A   1       5.057  86.652  68.068 +0.07 +0.42    +0.500    109.585
+ATOM     17  O15 ZIN A   1       4.758  85.552  68.501 -0.19 -0.72    -0.680    109.585
+ATOM     18  O16 ZIN A   1       4.400  87.152  67.171 -0.30 -0.77    -0.690    109.585
+TER
+ENDMDL
+MODEL       20
+USER    Run = 20
+USER    Cluster Rank = 4
+USER    Number of conformations in this cluster = 2
+USER  
+USER    RMSD from reference structure       = 109.753 A
+USER  
+USER    Estimated Free Energy of Binding    =   -2.80 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    8.87 mM (millimolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -3.40 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -2.83 kcal/mol
+USER        Electrostatic Energy            =   -0.57 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.13 kcal/mol
+USER    (3) Torsional Free Energy           =   +0.60 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.13 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dpf
+USER    NEWDPF move	ligand_1.pdbqt
+USER    NEWDPF about	2.234000 1.640000 0.158000
+USER    NEWDPF tran0	10.395932 89.644903 66.733417
+USER    NEWDPF axisangle0	0.155059 -0.637498 0.754687 171.839758
+USER    NEWDPF quaternion0	0.154666 -0.635883 0.752774 0.071151
+USER    NEWDPF dihe0	127.58 -153.57 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  N1  ZIN A   1       9.032  88.938  64.051 -0.03 +0.21    -0.390    109.753
+ATOM      2  C2  ZIN A   1      10.001  89.334  64.490 -0.10 -0.17    +0.250    109.753
+ATOM      3  C3  ZIN A   1      11.225  89.833  65.042 -0.20 -0.01    +0.010    109.753
+ATOM      4  C4  ZIN A   1      12.324  90.070  64.215 -0.30 -0.02    +0.050    109.753
+ATOM      5  C5  ZIN A   1      13.501  90.552  64.755 -0.29 -0.01    +0.100    109.753
+ATOM      6  F6  ZIN A   1      14.564  90.781  63.954 -0.14 -0.02    -0.130    109.753
+ATOM      7  C7  ZIN A   1      13.592  90.806  66.115 -0.38 -0.00    +0.030    109.753
+ATOM      8  C8  ZIN A   1      12.515  90.570  66.944 -0.34 -0.01    +0.070    109.753
+ATOM      9  C9  ZIN A   1      11.325  90.087  66.419 -0.16 -0.06    +0.190    109.753
+ATOM     10  N10 ZIN A   1      10.234  89.853  67.256 +0.06 +0.09    -0.600    109.753
+ATOM     11  C18 ZIN A   1      10.220  88.947  68.249 -0.05 +0.00    +0.530    109.753
+ATOM     12  C17 ZIN A   1       8.876  88.955  68.943 -0.15 +0.01    +0.090    109.753
+ATOM     13  O19 ZIN A   1      11.150  88.227  68.544 -0.66 -0.14    -0.530    109.753
+ATOM     14  C12 ZIN A   1       7.947  89.705  67.961 -0.10 -0.01    -0.070    109.753
+ATOM     15  C11 ZIN A   1       8.956  90.571  67.173 -0.06 -0.01    +0.280    109.753
+ATOM     16  C14 ZIN A   1       6.962  90.570  68.703 -0.00 +0.17    +0.500    109.753
+ATOM     17  O15 ZIN A   1       6.870  91.757  68.435 +0.05 -0.25    -0.680    109.753
+ATOM     18  O16 ZIN A   1       6.258  90.085  69.572 +0.02 -0.34    -0.690    109.753
+TER
+ENDMDL
+
+
+AVSFLD: # AVS field file
+AVSFLD: #
+AVSFLD: # Created by AutoDock
+AVSFLD: #
+AVSFLD: ndim=2           # number of dimensions in the field
+AVSFLD: nspace=1         # number of physical coordinates
+AVSFLD: veclen=7         # vector size
+AVSFLD: dim1=18          # atoms
+AVSFLD: dim2=4           # conformations
+AVSFLD: data=Real       # data type (byte,integer,Real,double)
+AVSFLD: field=uniform    # field coordinate layout
+AVSFLD: label= x y z vdW Elec q RMS
+AVSFLD: variable 1 file = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dlg.pdb filetype = ascii offset = 5 stride = 12
+AVSFLD: variable 2 file = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dlg.pdb filetype = ascii offset = 6 stride = 12
+AVSFLD: variable 3 file = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dlg.pdb filetype = ascii offset = 7 stride = 12
+AVSFLD: variable 4 file = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dlg.pdb filetype = ascii offset = 8 stride = 12
+AVSFLD: variable 5 file = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dlg.pdb filetype = ascii offset = 9 stride = 12
+AVSFLD: variable 6 file = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dlg.pdb filetype = ascii offset = 10 stride = 12
+AVSFLD: variable 7 file = C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Practical_3/doc_kinase.dlg.pdb filetype = ascii offset = 11 stride = 12
+AVSFLD: # end of file
+
+>>> Closing the docking parameter file (DPF)...
+This docking finished at:			11:34 36" a.m., 08/22/2024
+
+
+________________________________________________________________________________
+
+C:/Program Files (x86)/The Scripps Research Institute/Autodock/4.2.6/autodock4.exe: Successful Completion on "LAPTOP-LE18RADI"
+
+Real= 4m 13.94s,  CPU= 3m 08.27s,  System= 0.41s
+________________________________________________________________________________
+

@@ -1,0 +1,46 @@
+# AVS field file
+#
+# AutoDock Atomic Affinity and Electrostatic Grids
+#
+# Created by C:/Program Files (x86)/The Scripps Research Institute/Autodock/4.2.6/autogrid4.exe.
+#
+#SPACING 0.375
+#NELEMENTS 60 46 44
+#CENTER 7.025 93.837 61.323
+#MACROMOLECULE rigid.pdbqt
+#GRID_PARAMETER_FILE C:/Users/shree/Desktop/ACADS/Comp_Bio_Lab/Fuckthisshit/Fuckthisnewshit/grid.gpf
+#
+ndim=3			# number of dimensions in the field
+dim1=61			# number of x-elements
+dim2=47			# number of y-elements
+dim3=45			# number of z-elements
+nspace=3		# number of physical coordinates per point
+veclen=10		# number of affinity values at each point
+data=float		# data type (byte, integer, float, double)
+field=uniform		# field type (uniform, rectilinear, irregular)
+coord 1 file=rigid.maps.xyz filetype=ascii offset=0
+coord 2 file=rigid.maps.xyz filetype=ascii offset=2
+coord 3 file=rigid.maps.xyz filetype=ascii offset=4
+label=HD-affinity	# component label for variable 1
+label=C-affinity	# component label for variable 2
+label=SA-affinity	# component label for variable 3
+label=OA-affinity	# component label for variable 4
+label=N-affinity	# component label for variable 5
+label=A-affinity	# component label for variable 6
+label=F-affinity	# component label for variable 7
+label=NA-affinity	# component label for variable 8
+label=Electrostatics	# component label for variable 8
+label=Desolvation	# component label for variable 9
+#
+# location of affinity grid files and how to read them
+#
+variable 1 file=rigid.HD.map filetype=ascii skip=6
+variable 2 file=rigid.C.map filetype=ascii skip=6
+variable 3 file=rigid.SA.map filetype=ascii skip=6
+variable 4 file=rigid.OA.map filetype=ascii skip=6
+variable 5 file=rigid.N.map filetype=ascii skip=6
+variable 6 file=rigid.A.map filetype=ascii skip=6
+variable 7 file=rigid.F.map filetype=ascii skip=6
+variable 8 file=rigid.NA.map filetype=ascii skip=6
+variable 9 file=rigid.e.map filetype=ascii skip=6
+variable 10 file=rigid.d.map filetype=ascii skip=6

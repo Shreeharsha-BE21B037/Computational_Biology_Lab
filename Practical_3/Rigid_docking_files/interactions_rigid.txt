@@ -1,0 +1,73 @@
+List of protein-ligand interactions
+-----------------------------------
+
+
+
+
+PDB code: final_attempt
+==============
+
+
+Hydrogen bonds
+--------------
+
+       <----- A T O M   1 ----->       <----- A T O M   2 ----->
+
+       Atom Atom Res  Res              Atom Atom Res  Res
+        no  name name  no  Chain        no  name name  no  Chain  Distance
+    1    46  NZ  LYS  271    B    ---    18  F6  ZIN    1    A     2.845
+    2    30  N   MET  318    B    ---    13  O15 ZIN    1    A     2.807
+
+
+Non-bonded contacts
+-------------------
+
+       <----- A T O M   1 ----->       <----- A T O M   2 ----->
+
+       Atom Atom Res  Res              Atom Atom Res  Res
+        no  name name  no  Chain        no  name name  no  Chain  Distance
+    1    29  CZ  PHE  382    B    ---    17  O19 ZIN    1    A     3.898
+    2    28  CE2 PHE  382    B    ---    17  O19 ZIN    1    A     3.091
+    3   125  CB  ALA  380    B    ---    17  O19 ZIN    1    A     3.427
+    4    53  CG2 VAL  299    B    ---    17  O19 ZIN    1    A     2.893
+    5    52  CG1 VAL  299    B    ---    17  O19 ZIN    1    A     3.522
+    6    51  CB  VAL  299    B    ---    17  O19 ZIN    1    A     3.339
+    7    28  CE2 PHE  382    B    ---    16  C18 ZIN    1    A     3.271
+    8    95  OG1 THR  315    B    ---    16  C18 ZIN    1    A     3.804
+    9    53  CG2 VAL  299    B    ---    16  C18 ZIN    1    A     3.308
+   10   118  CG  LEU  370    B    ---    15  C17 ZIN    1    A     3.865
+   11    99  O   GLU  316    B    ---    15  C17 ZIN    1    A     3.713
+   12    53  CG2 VAL  299    B    ---    15  C17 ZIN    1    A     3.395
+   13    77  CD1 PHE  317    B    ---    14  O16 ZIN    1    A     3.593
+   14    70  CB  ALA  269    B    ---    14  O16 ZIN    1    A     3.034
+   15   112  CD2 LEU  248    B    ---    14  O16 ZIN    1    A     2.919
+   16    35  CG  MET  318    B    ---    13  O15 ZIN    1    A     3.805
+   17    34  CB  MET  318    B    ---    13  O15 ZIN    1    A     3.660
+   18    31  CA  MET  318    B    ---    13  O15 ZIN    1    A     3.766
+   19    73  C   PHE  317    B    ---    13  O15 ZIN    1    A     3.626
+   20    72  CA  PHE  317    B    ---    13  O15 ZIN    1    A     3.525
+   21    30  N   MET  318    B    ---    12  C14 ZIN    1    A     3.765
+   22    72  CA  PHE  317    B    ---    12  C14 ZIN    1    A     3.754
+   23    99  O   GLU  316    B    ---    12  C14 ZIN    1    A     3.410
+   24    70  CB  ALA  269    B    ---    12  C14 ZIN    1    A     3.522
+   25    99  O   GLU  316    B    ---    11  C12 ZIN    1    A     3.047
+   26    95  OG1 THR  315    B    ---    11  C12 ZIN    1    A     3.420
+   27    70  CB  ALA  269    B    ---    11  C12 ZIN    1    A     3.317
+   28    95  OG1 THR  315    B    ---    10  C11 ZIN    1    A     3.656
+   29    70  CB  ALA  269    B    ---    10  C11 ZIN    1    A     3.158
+   30    28  CE2 PHE  382    B    ---     9  N10 ZIN    1    A     3.402
+   31    28  CE2 PHE  382    B    ---     8  C9  ZIN    1    A     3.397
+   32    26  CD2 PHE  382    B    ---     8  C9  ZIN    1    A     3.541
+   33    44  CD  LYS  271    B    ---     5  C5  ZIN    1    A     3.668
+   34    26  CD2 PHE  382    B    ---     4  C4  ZIN    1    A     3.508
+   35    88  CG2 VAL  256    B    ---     4  C4  ZIN    1    A     3.820
+   36    28  CE2 PHE  382    B    ---     3  C3  ZIN    1    A     3.468
+   37    26  CD2 PHE  382    B    ---     3  C3  ZIN    1    A     3.196
+   38    28  CE2 PHE  382    B    ---     2  C2  ZIN    1    A     3.549
+   39    26  CD2 PHE  382    B    ---     2  C2  ZIN    1    A     3.428
+   40    87  CG1 VAL  256    B    ---     2  C2  ZIN    1    A     3.603
+   41    87  CG1 VAL  256    B    ---     1  N1  ZIN    1    A     3.443
+   42    61  CD2 TYR  253    B    ---     1  N1  ZIN    1    A     3.486
+   43    60  CD1 TYR  253    B    ---     1  N1  ZIN    1    A     3.777
+   44    59  CG  TYR  253    B    ---     1  N1  ZIN    1    A     3.349
+   45    58  CB  TYR  253    B    ---     1  N1  ZIN    1    A     3.655
